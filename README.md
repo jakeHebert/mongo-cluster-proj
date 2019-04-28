@@ -1,7 +1,11 @@
-1) Install Docker and docker-compose
+This application will allow you to create a sharded MongoDB database and import data from a .csv file into the database. 
+The database will be created using docker-compose to containerize and host each service. You will then be able to import data using python.
+
+1) Install Docker, docker-compose, and python
 ```
 sudo apt install docker
 sudo apt install docker-compose
+sudo apt install python
 ```
 2) Download this repository and browse to the directory it was placed in.
 3) Start the application with:
