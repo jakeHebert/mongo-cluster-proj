@@ -79,7 +79,7 @@ services:
       - mongocfg1
       - mongocfg2
     command: mongos --bind_ip_all --configdb mongors1conf/mongocfg1:27017,mongocfg2:27017,mongocfg3:27017 --port 27017
-     ports:
+    ports:
       - 27019:27017
     expose:
       - "27017"
