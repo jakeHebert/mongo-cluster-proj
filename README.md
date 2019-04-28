@@ -29,7 +29,7 @@ docker exec -it mongos1 bash -c "echo 'sh.addShard(\"mongors1/mongors1n1\")' | m
 ```
 mv <filename> mongo-csv-import/app-data
 ```
-  Or if the file is on a host machine that needs to be moved to a virtual machine:
+  Or if the file is on a host machine that needs to be moved to a virtual machine, run this first, then move the file:
 ```
 scp <filename> <username>@<vm ip address>:~/
 ```
