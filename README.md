@@ -10,9 +10,9 @@ sudo apt install git
 pip install pymongo
 ```
 
-Or if you are running this on a clean OS, you may run the setup.sh script after downloading the repo.
+Or if you are running this on a clean OS, you may run the setup.sh script after downloading the repo (Step 2).
 ```
-. /new-install/setup.sh
+. new-install/setup.sh
 ```
 
 2) Download this repository and browse to the directory it was placed in.
