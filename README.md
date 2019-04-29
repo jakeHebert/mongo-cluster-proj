@@ -57,3 +57,13 @@ You may access the database directly by connecting to the mongo router:
 ```
 mongo -port 27019
 ```
+Provided are 2 sample csv files to ensure everything is working properly. sample.csv is a subset of chunk_1.csv, with sample.csv having 298 entries out of the 100000 in chunk_1.csv.</br>
+### Sample Queries
+Run these queries inside of m_s1:
+```
+mongo -port 27019
+db.myCol.find( {NPPES_PROVIDER_LAST_ORG_NAME:  "CIBULL" } ).pretty()
+dby.myCol.aggregate( [
+      { $count: "NPPES_PROVIDER_GENDER" }
+]).pretty()
+```
