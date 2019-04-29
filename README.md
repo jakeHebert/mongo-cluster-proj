@@ -30,7 +30,8 @@ git clone https://github.com/jakeHebert/mongo-csv-import
 docker-compose up
 ```
 
-4) Configure the dbs to allow them to communicate with each other by running these commands one-by-one:
+4) Configure the dbs to allow them to communicate with each other by running these commands one-by-one:</br>
+*NOTE:* After the second command, wait ~30 seconds before running the third.
 ```
 docker exec -it m_cfg1 bash -c "echo 'rs.initiate({_id: \"m_rs1conf\",configsvr: true, members: [{ _id : 0, host : \"m_cfg1\" },{ _id : 1, host : \"m_cfg2\" }, { _id : 2, host : \"m_cfg3\" }]})' | mongo"
 docker exec -it m_rs1n1 bash -c "echo 'rs.initiate({_id : \"m_rs1\", members: [{ _id : 0, host : \"m_rs1n1\" },{ _id : 1, host : \"m_rs1n2\" },{ _id : 2, host : \"m_rs1n3\" }]})' | mongo"
