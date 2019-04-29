@@ -1,6 +1,9 @@
+### SUMMARY
 This application will allow you to create a sharded MongoDB database and import data from a .csv file into the database. 
 The database will be created using docker-compose to containerize and host each service. You will then be able to import data using python.
 
+
+### SETUP AND INSTALLATION
 1) Install all dependencies needed.
 ```
 sudo apt install docker
@@ -44,4 +47,9 @@ scp <filename> <username>@<vm ip address>:~/
 6) Run import.py from the app-data directory:
 ```
 python import.py <"csvfilename.csv">
+```
+### OTHER INFO AND TROUBLESHOOTING
+You may access the database directly by connecting to the mongo router:
+```
+mongo -port 27019
 ```
