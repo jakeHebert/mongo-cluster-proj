@@ -19,17 +19,17 @@ Or if you are running this on a clean OS, you may run the setup.sh script after 
 ```
 . new-install/setup.sh
 ```
-
+</br>
 2) Download this repository and browse to the directory it was placed in.
 ```
 git clone https://github.com/jakeHebert/mongo-csv-import
 ```
-
+</br>
 3) Start the application with:
 ```
 docker-compose up
 ```
-
+</br>
 4) Configure the dbs to allow them to communicate with each other by running these commands one-by-one:</br>
 *NOTE:* After the second command, wait ~30 seconds before running the third.
 ```
@@ -37,7 +37,7 @@ docker exec -it m_cfg1 bash -c "echo 'rs.initiate({_id: \"m_rs1conf\",configsvr:
 docker exec -it m_rs1n1 bash -c "echo 'rs.initiate({_id : \"m_rs1\", members: [{ _id : 0, host : \"m_rs1n1\" },{ _id : 1, host : \"m_rs1n2\" },{ _id : 2, host : \"m_rs1n3\" }]})' | mongo"
 docker exec -it m_s1 bash -c "echo 'sh.addShard(\"m_rs1/m_rs1n1\")' | mongo "
 ```
-
+</br>
 5) Move a csv file into the app-data for easier access.
 ```
 mv <filename> mongo-csv-import/app-data
@@ -46,11 +46,12 @@ mv <filename> mongo-csv-import/app-data
 ```
 scp <filename> <username>@<vm ip address>:~/
 ```
-
+</br>
 6) Run import.py from the app-data directory:
 ```
 python import.py <"csvfilename.csv">
 ```
+</br>
 ### OTHER INFO AND TROUBLESHOOTING
 You may access the database directly by connecting to the mongo router:
 ```
