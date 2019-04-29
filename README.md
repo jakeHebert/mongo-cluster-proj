@@ -62,8 +62,9 @@ Provided are 2 sample csv files to ensure everything is working properly. sample
 Run these queries inside of m_s1:
 ```
 mongo -port 27019
-db.myCol.find( {NPPES_PROVIDER_LAST_ORG_NAME:  "CIBULL" } ).pretty()
-dby.myCol.aggregate( [
+use default
+db.coll.find( {NPPES_PROVIDER_LAST_ORG_NAME:  "CIBULL" } ).pretty()
+db.coll.aggregate( [
       { $count: "NPPES_PROVIDER_GENDER" }
 ]).pretty()
 ```
