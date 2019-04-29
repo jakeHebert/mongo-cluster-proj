@@ -1,7 +1,7 @@
 ### SUMMARY
 This application will allow you to create a sharded MongoDB database and import data from a .csv file into the database. 
 The database will be created using docker-compose to containerize and host each service. You will then be able to import data using python.
-The database will consist of 3 sharded nodes in a replica set, with 1 node being the primary and the other 2 being secondary, 3 config nodes in a replica set, and 2 mongos routers.
+The database will consist of 3 sharded nodes in a replica set, with 1 node being the primary and the other 2 being secondary, 3 config nodes in a replica set, and 2 mongos routers. The id field is used as the shard key. 
 
 
 
