@@ -47,7 +47,7 @@ with open(FILEPATH, "r") as csvfile:
         index += 1
 
 # For each row, insert it into the database collection.
-for i in rows:            # TODO: get sharding to work. Hash the id, then split between 3 separate nodes.
+for i in rows:
     myCol.insert_one(i)
 
 print(myCol.count_documents({}))
